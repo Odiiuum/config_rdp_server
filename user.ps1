@@ -1,4 +1,4 @@
-for ($i = 41; $i -le 60; $i++) {
+ for ($i = 41; $i -le 60; $i++) {
     $username = "work_user-"
     if ($i -lt 10) {
         $username += "0" + $i
@@ -6,7 +6,7 @@ for ($i = 41; $i -le 60; $i++) {
         $username += $i
     }
 
-    $password = ConvertTo-SecureString -String "sS1tY4aR" -AsPlainText -Force
+    $password = ConvertTo-SecureString -String "#PASSWORD" -AsPlainText -Force
 
     New-LocalUser -Name $username -Password $password -Description "Work User $i" -UserMayNotChangePassword
 
